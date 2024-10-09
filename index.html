@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Algo Bonito - Taller Creativo</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+    <button class="menu-toggle">☰</button>
+    <nav class="menu">
+        <div class="menu-header">
+            <h2>Menú</h2>
+        </div>
+        <ul class="menu-items">
+            <li><a href="#inicio" data-module="inicio">Inicio</a></li>
+            <li><a href="#categorias" data-module="categorias">Catalogo</a></li>
+            <li><a href="#contacto" data-module="contacto">Contacto</a></li>
+        </ul>
+    </nav>
+
+    <main>
+        <div id="inicio" class="module">
+            <div class="intro-container">
+                <img src="imagenes/Algo Bonito.jpg" alt="Algo-Bonito" class="logo1" />
+                <div class="intro-text">
+                    <h1>Descubre Nuestro Arte</h1>
+                    <p></p>
+                    <p>En Algo Bonito, cada cuadro es una obra de arte diseñada para transformar tus espacios. </p>
+                    <p>Nuestra colección se caracteriza por su elegancia y estilo, utilizando colores predominantes que evocan emociones y armonía en tu hogar.</p>
+                </div>
+            </div>
+
+            <h2>Nuestros servicios</h2>
+            <div class="services-container">
+                <div class="service-item">
+                    <h3>Desarrollo de Cuadros</h3>
+                    <p>Diseñamos y creamos cuadros personalizados que transforman tus espacios con estilo y elegancia.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Estilo y Elegancia</h3>
+                    <p>Nuestra colección se caracteriza por su elegancia, utilizando colores que evocan emociones y armonía.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Arte Contemporáneo</h3>
+                    <p>Ofrecemos piezas únicas que no solo decoran, sino que cuentan historias a través del arte.</p>
+                </div>
+                <div class="service-item">
+                    <h3>Atención Personalizada</h3>
+                    <p>Brindamos asesoría para ayudarte a elegir la obra perfecta que se adapte a tu estilo y espacio.</p>
+                </div>
+            </div>
+        </div>
+
+        <!--------------------------------------------------------------------------------------------------->
+
+        <div id="categorias" class="module">
+            <header class="header">
+                <h1>Catalogo</h1>
+                <div class="search-bar">
+                    <input type="text" id="search-input" placeholder="Buscar productos">
+                    <button class="search-btn" id="search-button">Buscar</button>
+                </div>
+            </header>
+            <div class="filters">
+                <div class="type-filter">
+                    <h1>Tipo de Cuadros</h1>
+
+                    <div class="type-options">
+                        <button class="type-btn active" data-type="todos">Todos</button>
+                        <button class="type-btn" data-type="una-pieza">Una pieza</button>
+                        <button class="type-btn" data-type="triptico">Tríptico</button>
+                        <button class="type-btn" data-type="5-piezas">5 piezas</button>
+                    </div>
+                </div>
+            </div>
+
+            <!--------------------------------------------------------------------------------------------------->
+
+            <div class="product-list" id="product-list">
+                <!-- Aquí irían los productos -->
+                <div class="product" data-type="una-pieza">
+                    <img src="Mostrarios\Dolar Pablo.jpg" alt="Producto 1">
+                    <div class="product-details">
+                        <h3>Cuadro de Pablo Escobar</h3>
+                        <p>Hermoso cuadro Vinilo adhesivo en acabado brillante, de la mas alta calidad instalado en una lámina mdf de 9 m MADERA </p>
+                        <div class="product-actions">
+                            <span class="price">$65.000</span>
+                            <button class="buy-btn" onclick="redirectToWhatsApp('Cuadro de Pablo Escobar', '$65.000', 'https:tu-sitio.com/imagenes/cuadro-pablo-escobar.jpg')">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product" data-type="una-pieza">
+                    <img src="Mostrarios\Tigre y leon.jpg" alt="Producto 2">
+                    <div class="product-details">
+                        <h3>Cuadro de Tigre</h3>
+                        <p>Descripción del cuadro triptico.</p>
+                        <div class="product-actions">
+                            <span class="price">$70.000</span>
+                            <button class="buy-btn" onclick="redirectToWhatsApp('Cuadro de Tigre', '$70.000')">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product" data-type="una-pieza">
+                    <img src="Mostrarios\Ref 1.jpg" alt="Producto 2">
+                    <div class="product-details">
+                        <h3>Cuadro de Escultura</h3>
+                        <p>Hermoso cuadro</p>
+                        <div class="product-actions">
+                            <span class="price">$60.000</span>
+                            <button class="buy-btn" onclick="redirectToWhatsApp('Cuadro de Escultura', '$60.000')">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------------------------------------->
+
+                <div class="product" data-type="triptico">
+                    <img src="Mostrarios\Enamorados D-P.jpg" alt="Producto 3">
+                    <div class="product-details">
+                        <h3>Cuadro Triptico de Enamorados D-P</h3>
+                        <p>Descripción del cuadro triptico de enamorados.</p>
+                        <div class="product-actions">
+                            <span class="price">$140.000</span>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="product" data-type="triptico">
+                    <img src="Mostrarios\Triptico Lunas.jpg" alt="Producto 4">
+                    <div class="product-details">
+                        <h3>Cuadro Triptico de Lunas</h3>
+                        <p>Descripción del cuadro triptico de enamorados.</p>
+                        <div class="product-actions">
+                            <span class="price">$90.000</span>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+                <!--------------------------------------------------------------------------------------------------->
+                <div class="product" data-type="5-piezas">
+                    <img src="Mostrarios\5 piezas - Perros.jpg" alt="Producto 4">
+                    <div class="product-details">
+                        <h3>Cuadro 5 piezas de Perros</h3>
+                        <p>Hermoso cuadro de 5 piezas con tus mascotas preferidas.</p>
+                        <div class="product-actions">
+                            <span class="price">$220.000</span>
+                            <button class="buy-btn">Comprar</button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Más productos... -->
+            </div>
+        </div>
+
+        <div id="contacto" class="module">
+            <h2>Contactanos</h2>
+            <h1>¡Nos encantaría saber de ti!
+                <p></p>Síguenos en nuestras redes sociales</h1>
+
+            <div class="social-media">
+                <a href="https://www.facebook.com/profile.php?id=100055842330313&mibextid=ZbWKwL" target="_blank" class="social-link">
+                    <img src="iconos\facebook.png" alt="Facebook" />
+                </a>
+                <a href="https://instagram.com/algo_bonito_taller_creativo?igshid=YzgyMTM2MGM=" target="_blank" class="social-link">
+                    <img src="iconos\Instragram.png" alt="Instagram" />
+                </a>
+
+                <a href="https://wa.me/message/R4BIK2RI5UQOO1" target="_blank" class="social-link">
+                    <img src="iconos\WhatsApp.png" alt="WhatsApp" />
+                </a>
+            </div>
+            <img src="imagenes\Algo Bonito.jpg" alt="Algo-Bonito" class="logo" />
+        </div>
+    </main>
+
+
+
+    <script src="script.js"></script>
+    <script>
+        // Funcionalidad de búsqueda
+        document.getElementById('search-button').addEventListener('click', function() {
+            const searchTerm = document.getElementById('search-input').value.toLowerCase();
+            const products = document.querySelectorAll('.product'); // Asegúrate de que tus productos tengan la clase 'product'
+
+            products.forEach(product => {
+                const productName = product.querySelector('h3').textContent.toLowerCase(); // Suponiendo que el nombre del producto está en un <h3>
+                if (productName.includes(searchTerm)) {
+                    product.style.display = 'block'; // Muestra el producto si coincide
+                } else {
+                    product.style.display = 'none'; // Oculta el producto si no coincide
+                }
+            });
+        });
+
+        function redirectToWhatsApp(productName, productPrice, productImage) {
+            const message = `¡Hola! Estoy interesado en el producto: ${productName} que cuesta ${productPrice}. Puedes ver la imagen aquí: ${productImage}`;
+            const url = `https://wa.me/message/R4BIK2RI5UQOO1?text=${encodeURIComponent(message)}`;
+            window.open(url, '_blank');
+        }
+    </script>
+</body>
+
+</html>
